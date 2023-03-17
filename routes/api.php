@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//rutas api progetigas por auth
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Ruta para el login
+Route::post('/login', [loginController::class, 'Login']);
+//Ruta para el logout
+Route::post('/logout', [loginController::class, 'Logout']);
+
