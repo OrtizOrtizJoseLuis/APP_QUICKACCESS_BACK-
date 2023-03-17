@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('catMenuHijos', function (Blueprint $table) {
+        Schema::create('catMenuHijos', function (Blueprint $table) { 
             $table->id();
             $table->string('nombre')->comment('Nombre');
             $table->string('icono')->comment('Icono');
@@ -27,6 +27,7 @@ return new class extends Migration
             $table->unsignedBigInteger('idCatPerfil')->comment('Id Perfil');
             $table->foreign('idCatPerfil')->references('id')->on('catPerfiles');
 
+            $table->softDeletes()->comment('Fecha de eliminación');
             $table->timestamps();
         });
     }

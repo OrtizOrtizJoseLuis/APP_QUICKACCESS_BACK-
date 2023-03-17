@@ -27,7 +27,7 @@ return new class extends Migration
             $table->softDeletes()->comment('Fecha de eliminación');
             $table->timestamps();
         });
-    }
+    } 
 
     /**
      * Reverse the migrations.

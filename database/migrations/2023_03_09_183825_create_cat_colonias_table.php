@@ -22,7 +22,7 @@ return new class extends Migration
             $table->unsignedBigInteger('idCatMunicipios')->comment('Id Municipio');
             $table->foreign('idCatMunicipios')->references('id')->on('catMunicipios');
 
-            $table->softDeletes()->comment('Fecha de eliminación');
+            $table->softDeletes()->comment('Fecha de eliminación'); 
             $table->timestamps();
         });
     }

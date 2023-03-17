@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('catPermisos', function (Blueprint $table) {
+        Schema::create('catPermisos', function (Blueprint $table) { 
             $table->id();
             $table->boolean('crear')->comment('Crear');
             $table->boolean('editar')->comment('Editar');
