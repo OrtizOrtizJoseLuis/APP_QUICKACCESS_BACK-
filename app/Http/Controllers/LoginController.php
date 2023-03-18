@@ -25,8 +25,7 @@ class LoginController extends Controller
                         'code' => 200,
                         'message' => 'Bienvenido',
                         'user' => $usuario,
-                        'token' => $token->plainTextToken,
-                        'csrf' => csrf_token()
+                        'token' => $token->plainTextToken
                     ], 200);
                 }else{
                     return response()->json([
@@ -39,10 +38,10 @@ class LoginController extends Controller
                     'code' => 404,
                     'message' => 'El usuario no existe'
                 ], 404);
-            } 
+            }
             }
         }
-        
+
 
     //funcion para cerrar sesion
     public function logout(Request $request){
@@ -58,9 +57,9 @@ class LoginController extends Controller
                 'code' => 404,
                 'message' => 'El usuario no existe'
             ], 404);
-        }  
+        }
       }
     }
-          
-    
+
+
 
